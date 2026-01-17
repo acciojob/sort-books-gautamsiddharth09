@@ -25,17 +25,18 @@ useEffect(() => {
     
     <div>
       <h1>Books List</h1>
-      <label for="books" name="books">Sort books</label>
-      <select id='books' value={sortBy} onChange={(e) => dispatch(setSortBy(e.target.value))}>
-        <option value="title">Title</option>
-        <option value="author">Author</option>
-        <option value="publisher">Publisher</option>
-      </select>
-    <label for="sortBooks" name="sortBooks">Select by order</label>
-      <select id='sortBooks' value={order} onChange={(e) => dispatch(setOrder(e.target.value))}>
-        <option value="asc">Ascending</option>
-        <option value="desc">Descending</option>
-      </select>
+      <label htmlFor="books">Sort by:</label>
+<select id="books" value={sortBy} onChange={(e) => dispatch(setSortBy(e.target.value))}>
+  <option value="title">Title</option>
+  <option value="author">Author</option>
+  <option value="publisher">Publisher</option>
+</select>
+
+<label htmlFor="sortBooks">Order:</label>
+<select id="sortBooks" value={order} onChange={(e) => dispatch(setOrder(e.target.value))}>
+  <option value="asc">Ascending</option>
+  <option value="desc">Descending</option>
+</select>
 
       <table>
         <thead>
