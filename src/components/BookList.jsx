@@ -27,7 +27,7 @@ const BookList = () => {
 
    return (
     <div className="books-container">
-      <h1>📚 Book List</h1>
+      <h1>Book List</h1>
 
       <div className="controls">
         <label>
