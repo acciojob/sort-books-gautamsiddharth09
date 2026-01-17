@@ -24,7 +24,7 @@ useEffect(() => {
   return (
     
     <div>
-      
+      <h1>Books List</h1>
       <select value={sortBy} onChange={(e) => dispatch(setSortBy(e.target.value))}>
         <option value="title">Title</option>
         <option value="author">Author</option>
