@@ -17,10 +17,15 @@ const BookList = () => {
     dispatch(booksApi());
   }, [dispatch]);
 
+  
+  const handleSortChange = (e) => dispatch(setSortBy(e.target.value));
+  const handleOrderChange = (e) => dispatch(setOrder(e.target.value));
+
+
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  return (
+   return (
     <div className="books-container">
       <h1>📚 Book List</h1>
 
@@ -61,7 +66,7 @@ const BookList = () => {
           </tr>
         </thead>
         <tbody>
-          {sorted.map((b) => (
+          {books.map((b) => (
             <tr key={b.isbn}>
               <td>{b.title}</td>
               <td>{b.author}</td>
